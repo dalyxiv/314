@@ -8,8 +8,12 @@ const qualifiers = [
 ];
 
 const QualifiersSection = () => {
+  const scrollToApply = () => {
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="py-24 md:py-32 relative">
+    <section id="qualifiers" className="py-24 md:py-32 relative">
       <div className="container px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
@@ -36,7 +40,7 @@ const QualifiersSection = () => {
           
           {/* CTA */}
           <div className="text-center">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={scrollToApply}>
               Apply for Partnership
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
