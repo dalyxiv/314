@@ -2,7 +2,7 @@ import { X, Check } from 'lucide-react';
 
 const ProblemSolutionSection = () => {
   return (
-    <section className="py-24 md:py-32 relative geometric-bg">
+    <section id="solution" className="py-24 md:py-32 relative geometric-bg">
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {/* The Problem */}

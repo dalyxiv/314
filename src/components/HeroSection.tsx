@@ -4,8 +4,12 @@ import GeometricBackground from './GeometricBackground';
 import logo from '@/assets/logo.png';
 
 const HeroSection = () => {
+  const scrollToApply = () => {
+    document.getElementById('apply')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden geometric-bg">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden geometric-bg pt-20">
       <GeometricBackground />
       
       {/* Gradient overlays */}
@@ -44,7 +48,7 @@ const HeroSection = () => {
             className="opacity-0 animate-fade-in-up"
             style={{ animationDelay: '0.6s' }}
           >
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={scrollToApply}>
               Apply for Partnership
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
