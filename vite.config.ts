@@ -8,9 +8,6 @@ export default defineConfig(({ mode }) => ({
   base: '/', // Add this line
   server: {
     host: "::",
-    // ... rest of your code
-  server: {
-    host: "::",
     port: 8080,
     hmr: {
       overlay: false,
