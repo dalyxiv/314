@@ -51,7 +51,7 @@ const Navbar = () => {
             }}
             className="flex items-center"
           >
-            <img src={logo} alt="3:14" className="h-8 md:h-10" />
+            <img src={logo} alt="3:14" className="h-12 md:h-14 drop-shadow-[0_0_15px_hsl(270_70%_50%/0.6)] hover:scale-110 transition-transform duration-300" />
           </a>
 
           {/* Desktop Navigation */}
