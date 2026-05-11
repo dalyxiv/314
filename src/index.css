@@ -100,6 +100,48 @@
   .card-glass {
     @apply bg-card/50 backdrop-blur-sm border border-border/50;
   }
+
+  .card-hover-glow {
+    @apply transition-all duration-500;
+    box-shadow: 0 0 0 hsl(270 70% 50% / 0);
+  }
+  .card-hover-glow:hover {
+    box-shadow: 0 0 40px hsl(270 70% 50% / 0.35), 0 0 80px hsl(270 70% 50% / 0.15);
+    transform: translateY(-4px);
+    border-color: hsl(270 70% 50% / 0.4);
+  }
+
+  .card-hover-gold:hover {
+    box-shadow: 0 0 40px hsl(45 93% 52% / 0.35), 0 0 80px hsl(45 93% 52% / 0.15);
+    transform: translateY(-4px);
+    border-color: hsl(45 93% 52% / 0.4);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 30px hsl(45 93% 52% / 0.6), 0 0 60px hsl(45 93% 52% / 0.3);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 30px hsl(270 70% 50% / 0.7), 0 0 60px hsl(270 70% 50% / 0.4);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(270 50% 30% / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(270 50% 30% / 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 0%, transparent 75%);
+  }
 }
 
 @layer utilities {
@@ -114,6 +156,19 @@
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }
+
+  .animate-spin-slow {
+    animation: spin 18s linear infinite;
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -124,4 +179,18 @@
 @keyframes glow {
   from { opacity: 0.5; }
   to { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 30px hsl(270 70% 50% / 0.5)) drop-shadow(0 0 60px hsl(45 93% 52% / 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 60px hsl(270 70% 50% / 0.8)) drop-shadow(0 0 100px hsl(45 93% 52% / 0.5));
+  }
 }

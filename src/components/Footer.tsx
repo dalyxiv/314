@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo and tagline */}
           <div className="flex flex-col items-center md:items-start gap-3">
-            <img src={logo} alt="3:14 Three Fourteen" className="h-12" />
-            <p className="text-muted-foreground text-sm tracking-wider">Luck, Engineered.</p>
+            <img src={logo} alt="3:14 Three Fourteen" className="h-20 drop-shadow-[0_0_25px_hsl(270_70%_50%/0.5)]" />
+            <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase">Luck, Engineered.</p>
           </div>
           
           {/* Links */}

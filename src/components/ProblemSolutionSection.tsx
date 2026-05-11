@@ -6,11 +6,11 @@ const ProblemSolutionSection = () => {
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           {/* The Problem */}
-          <div className="card-glass rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-destructive/50 transition-colors">
+          <div className="reveal card-glass rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-destructive/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_hsl(0_84%_60%/0.3)]">
             <div className="absolute top-0 right-0 w-24 h-24 bg-destructive/10 rounded-full blur-3xl" />
             
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-destructive/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform">
                 <X className="w-6 h-6 text-destructive" />
               </div>
               <h3 className="text-2xl font-bold text-destructive">The Problem</h3>
@@ -23,11 +23,11 @@ const ProblemSolutionSection = () => {
           </div>
           
           {/* The Solution */}
-          <div className="card-glass rounded-2xl p-8 md:p-10 relative overflow-hidden group hover:border-secondary/50 transition-colors">
+          <div className="reveal card-glass card-hover-gold rounded-2xl p-8 md:p-10 relative overflow-hidden group" style={{ transitionDelay: '120ms' }}>
             <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/10 rounded-full blur-3xl" />
             
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-transform">
                 <Check className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-2xl font-bold text-secondary">The 3:14 Solution</h3>

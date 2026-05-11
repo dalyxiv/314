@@ -62,12 +62,12 @@ const ContactForm = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <div className="reveal text-center mb-12">
             <span className="text-secondary font-semibold text-sm tracking-widest uppercase mb-4 block">
               Start Your Journey
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Apply for <span className="gradient-text-primary">Partnership</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              Apply for <span className="gradient-text-primary text-glow-purple">Partnership</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto">
               Ready to engineer your luck? Tell us about your business and let's explore
@@ -76,7 +76,7 @@ const ContactForm = () => {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="card-glass rounded-2xl p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="reveal card-glass card-hover-glow rounded-2xl p-8 md:p-12">
             <div className="grid gap-6">
               {/* Name & Email Row */}
               <div className="grid md:grid-cols-2 gap-6">
